@@ -16,6 +16,13 @@ public class EmployeeController {
     @Autowired
     EmployeeService employeeServiceImpl ;
 
+    @GetMapping("/welcome")
+    public ResponseEntity<String> sayWel(){
+
+     return   ResponseEntity.ok("Welcome To Pune");
+    }
+
+
 
     @PostMapping("/signup")
     public ResponseEntity<String> signUp(@RequestBody Employee employee){
